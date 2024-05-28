@@ -1,81 +1,70 @@
-# Trabajo colaborativo entre Najla Gatica y Jimena Traipe
-
 # Proyecto OnlyFlans
+# Trabajo colaborativo entre Najla Gatica y Jimena Traipe
 
 Este proyecto es una aplicación web para una PYME de venta de pasteles y postres. A continuación, se detallan los pasos para configurar y ejecutar el proyecto.
 
-## 0. Revisión previa de instalaciones (Python y pip)
 
-1. Verificar la versión de Python:
-    ```bash
-    python -V
-    ```
-    Debería mostrar algo similar a:
-    ```
-    Python 3.12.2
-    ```
+# OnlyFlans
 
-2. Verificar la versión de pip:
-    ```bash
-    pip -V
-    ```
-    Debería mostrar algo similar a:
-    ```
-    pip 24.0
-    ```
+Este proyecto describe cómo configurar y ejecutar un proyecto de Django llamado `onlyflans` en Windows.
 
-3. Ver las dependencias instaladas globalmente:
-    ```bash
-    pip list
-    ```
+## Requerimientos
 
-> Nota: Saltamos la instalación de Django globalmente porque ya está instalado.
+### 1. Crear y activar un entorno virtual
 
-## 1. Preparación del entorno de desarrollo
+Primero, crea un entorno virtual llamado `onlyflans` y actívalo.
 
-### 1.0 Etapa 0: Entrar a la carpeta del proyecto
-```bash
-cd onlyflans_proyecto
-
-1.1 Etapa 1: Preparación del entorno virtual e instalación de dependencias
+bash
 python -m venv onlyflans
-
-1.2 etapa 2: Activar el entorno virtual (en windows)
-
 onlyflans\Scripts\activate
 
-- (en MacOS/Linux)
-source onlyflans/bin/activate
+A continuación, comprueba que la versión de Python usada es Python 3.
 
-1.3 Etapa 3: Instalar Django en el entorno virtual
-pip install django
+bash
+python --version
 
-1.4 Revisar las dependencias instaladas en el entorno virtual
-pip list
+### 2. Instalar Django
 
-1.5 Verificar las dependencias instaladas
+Instala Django 3.2.4 dentro del entorno virtual `onlyflans`.
+
+bash
+pip install django==3.2.4
+
+Verifica que Django haya sido instalado exitosamente utilizando el comando `pip freeze`.
+
+bash
 pip freeze
 
-Crear y configurar el proyecto Django
-Ingresar a la carpeta del entorno virtual
+Deberías ver una salida similar a:
+
+
+Django==3.2.4
+
+### 3. Generar y configurar el proyecto Django
+
+Usa `django-admin` para generar un proyecto llamado `onlyflans`.
+
+bash
+django-admin startproject onlyflans
+
+Ingresa a la carpeta del proyecto recién creado.
+
+bash
 cd onlyflans
 
-Crear el proyecto Django:
-django-admin startproject onlyflansApp
+Aplica las migraciones iniciales para configurar la base de datos.
 
-Migrar la base de datos:
-Ingresar a la carpeta del proyecto:
-cd onlyflansApp
-
-Preparar las migraciones (opcional, generalmente automático, aún no lo ocupamos porque estamos en el hito 1):
-python manage.py makemigrations
-
-Ejecutar las migraciones:
+bash
 python manage.py migrate
 
-Ejecutar el servidor de desarrollo
+Inicia el servidor de desarrollo de Django.
+
+bash
 python manage.py runserver
 
+Abre tu navegador y dirígete a `http://127.0.0.1:8000/` para ver la página de bienvenida de Django.
+
+¡Y eso es todo! Ahora tienes un proyecto Django funcionando en tu entorno local.
 
 
 
