@@ -32,42 +32,56 @@ Este proyecto es una aplicación web para una PYME de venta de pasteles y postre
 > Nota: Saltamos la instalación de Django globalmente porque ya está instalado.
 ## 1. Preparación del entorno de desarrollo
 
-### 1.0 Etapa 0: Entrar a la carpeta del proyecto
+### HITO 1: Entrar a la carpeta del proyecto
 ```
 cd onlyflans_proyecto
 ```
+Preparación del entorno virtual e instalación de dependencias
+```
+python -m venv onlyflans
+```
+Activar el entorno virtual (en windows)
+```
+onlyflans\Scripts\activate
+```
 
-1.1 Etapa 1: Preparación del entorno virtual e instalación de dependencias
-```python -m venv onlyflans```
+Instalar Django en el entorno virtual
+```
+pip install django
+```
 
-1.2 etapa 2: Activar el entorno virtual (en windows)
-```onlyflans\Scripts\activate```
+Revisar las dependencias instaladas en el entorno virtual
+```
+pip list
+```
 
-1.3 Etapa 3: Instalar Django en el entorno virtual
-```pip install django```
+Verificar las dependencias instaladas
+```
+pip freeze
+```
 
-1.4 Revisar las dependencias instaladas en el entorno virtual
-```pip list```
+# Crear y configurar el proyecto Django
 
-1.5 Verificar las dependencias instaladas
-```pip freeze```
-
-Crear y configurar el proyecto Django
 Ingresar a la carpeta del entorno virtual
-```cd onlyflans```
+```
+cd onlyflans
+```
 
 Crear el proyecto Django:
-```django-admin startproject onlyflansApp```
+```
+django-admin startproject onlyflansApp
+```
 
-Migrar la base de datos:
+# Migrar la base de datos
 Ingresar a la carpeta del proyecto:
-```cd onlyflansApp```
-
-Preparar las migraciones (opcional, generalmente automático, aún no lo ocupamos porque estamos en el hito 1):
-```python manage.py makemigrations```
-
+```
+cd onlyflansApp
+```
 Ejecutar las migraciones:
-```python manage.py migrate```
-
+```
+python manage.py migrate
+```
 Ejecutar el servidor de desarrollo
-```python manage.py runserver```
+```
+python manage.py runserver
+```
