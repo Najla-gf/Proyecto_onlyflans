@@ -16,17 +16,16 @@ Este proyecto es una aplicación web para una PYME de venta de pasteles y postre
     ```
     pip -V
     ```
-    Debería mostrar algo similar a:
-    ```
-    pip 24.0
-    ```
+> Debería mostrar algo similar a: ``` pip 24.0 ```
 
 3. Ver las dependencias instaladas globalmente:
     ```
     pip list
     ```
 
-> Nota: Saltamos la instalación de Django globalmente porque ya está instalado.
+> Nota: Saltamos la instalación de Django globalmente porque ya está instalado ```pip install django```
+
+
 ## 1. Preparación del entorno de desarrollo
 
 ### HITO 1: Creación de entorno virtual (venv)
