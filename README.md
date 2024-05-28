@@ -1,41 +1,73 @@
-# Proyecto OnlyFlans
 # Trabajo colaborativo entre Najla Gatica y Jimena Traipe
+
+# Proyecto OnlyFlans
 
 Este proyecto es una aplicación web para una PYME de venta de pasteles y postres. A continuación, se detallan los pasos para configurar y ejecutar el proyecto.
 
+## 0. Revisión previa de instalaciones (Python y pip)
 
+1. Verificar la versión de Python:
+    ```
+    python -V
+    ```
+    Debería mostrar algo similar a:
+    ```
+    Python 3.12.2
+    ```
 
-OnlyFlans
-Este proyecto describe cómo configurar y ejecutar un proyecto de Django llamado onlyflans en Windows.
+2. Verificar la versión de pip:
+    ```
+    pip -V
+    ```
+    Debería mostrar algo similar a:
+    ```
+    pip 24.0
+    ```
 
-Requerimientos
-1. Crear y activar un entorno virtual
-Primero, crea un entorno virtual llamado onlyflans y actívalo:
-python -m venv onlyflans
-onlyflans\Scripts\activate
+3. Ver las dependencias instaladas globalmente:
+    ```
+    pip list
+    ```
 
-A continuación, comprueba que la versión de Python usada es Python 3:
-python --version
+> Nota: Saltamos la instalación de Django globalmente porque ya está instalado.
+## 1. Preparación del entorno de desarrollo
 
-2. Instalar Django
-Instala Django 3.2.4 dentro del entorno virtual onlyflans:
-pip install django==3.2.4
+### 1.0 Etapa 0: Entrar a la carpeta del proyecto
+```
+cd onlyflans_proyecto
+```
 
-Verifica que Django haya sido instalado exitosamente utilizando el comando pip freeze. Deberías ver una salida similar a:
-Django==3.2.4
+1.1 Etapa 1: Preparación del entorno virtual e instalación de dependencias
+```python -m venv onlyflans```
 
-3. Generar y configurar el proyecto Django
-Usa django-admin para generar un proyecto llamado onlyflans:
-django-admin startproject onlyflans
+1.2 etapa 2: Activar el entorno virtual (en windows)
+```onlyflans\Scripts\activate```
 
-Ingresa a la carpeta del proyecto recién creado:
-cd onlyflans
+1.3 Etapa 3: Instalar Django en el entorno virtual
+```pip install django```
 
-Aplica las migraciones iniciales para configurar la base de datos:
-python manage.py migrate
+1.4 Revisar las dependencias instaladas en el entorno virtual
+```pip list```
 
-Inicia el servidor de desarrollo de Django:
-python manage.py runserver
+1.5 Verificar las dependencias instaladas
+```pip freeze```
 
-Abre tu navegador y dirígete a http://127.0.0.1:8000/ para ver la página de bienvenida de Django.
+Crear y configurar el proyecto Django
+Ingresar a la carpeta del entorno virtual
+```cd onlyflans```
 
+Crear el proyecto Django:
+```django-admin startproject onlyflansApp```
+
+Migrar la base de datos:
+Ingresar a la carpeta del proyecto:
+```cd onlyflansApp```
+
+Preparar las migraciones (opcional, generalmente automático, aún no lo ocupamos porque estamos en el hito 1):
+```python manage.py makemigrations```
+
+Ejecutar las migraciones:
+```python manage.py migrate```
+
+Ejecutar el servidor de desarrollo
+```python manage.py runserver```
