@@ -10,10 +10,7 @@ Este proyecto es una aplicación web para una PYME de venta de pasteles y postre
     ```
     python -V
     ```
-    Debería mostrar algo similar a:
-    ```
-    Python 3.12.2
-    ```
+> Debería mostrar algo similar a: ```Python 3.12.2```
 
 2. Verificar la versión de pip:
     ```
@@ -32,7 +29,9 @@ Este proyecto es una aplicación web para una PYME de venta de pasteles y postre
 > Nota: Saltamos la instalación de Django globalmente porque ya está instalado.
 ## 1. Preparación del entorno de desarrollo
 
-### HITO 1: Entrar a la carpeta del proyecto
+### HITO 1: Creación de entorno virtual (venv)
+
+Entrar a la carpeta del proyecto
 ```
 cd onlyflans_proyecto
 ```
