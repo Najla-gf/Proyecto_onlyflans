@@ -32,7 +32,7 @@ Este proyecto es una aplicación web para una PYME de venta de pasteles y postre
 
 Entrar a la carpeta del proyecto
 ```
-cd onlyflans_proyecto
+cd proyecto_onlyflans
 ```
 Preparación del entorno virtual e instalación de dependencias
 ```
@@ -61,13 +61,13 @@ pip freeze
 # Crear el proyecto Django
 Crear el proyecto Django:
 ```
-django-admin startproject onlyflansApp
+django-admin startproject onlyflansPY
 ```
 
 # Migrar la base de datos
 Ingresar a la carpeta del proyecto:
 ```
-cd onlyflansApp
+cd onlyflansPY
 ```
 Ejecutar las migraciones:
 ```
