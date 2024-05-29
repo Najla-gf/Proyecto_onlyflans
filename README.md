@@ -1,6 +1,6 @@
-# Trabajo colaborativo entre Najla Gatica y Jimena Traipe
-
 # Proyecto OnlyFlans
+## Trabajo colaborativo entre Najla Gatica y Jimena Traipe
+
 
 Este proyecto es una aplicación web para una PYME de venta de pasteles y postres. A continuación, se detallan los pasos para configurar y ejecutar el proyecto.
 
@@ -40,7 +40,7 @@ python -m venv onlyflans
 ```
 Activar el entorno virtual (en windows)
 ```
-onlyflans\Scripts\activate
+source onlyflans/Scripts/activate
 ```
 
 Instalar Django en el entorno virtual
@@ -58,13 +58,7 @@ Verificar las dependencias instaladas
 pip freeze
 ```
 
-# Crear y configurar el proyecto Django
-
-Ingresar a la carpeta del entorno virtual
-```
-cd onlyflans
-```
-
+# Crear el proyecto Django
 Crear el proyecto Django:
 ```
 django-admin startproject onlyflansApp
