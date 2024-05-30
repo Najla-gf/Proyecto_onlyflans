@@ -77,3 +77,44 @@ Ejecutar el servidor de desarrollo
 ```
 python manage.py runserver
 ```
+
+_____________________________
+
+#Hito2 
+
+cd Proyecto_onlyflans
+
+source onlyflans/Scripts/activate (activamos)
+
+cd onlyflansPY (entrar en la carpeta)
+
+crear la app
+
+python manage.py startapp web 
+
+1. ir a settings.py y agregar la aplicacion a el listado 
+'web',
+
+creamos carpeta templates dentro de web
+
+creamos index html dentro de templates 
+indice
+about
+welcome
+
+crear vistas en view
+(vincular la pag web con el resto de la pagina a traves de las rutas para poder abrirlas en el futuro)
+(request, 'index.html')
+
+--- configurar las url
+
+from web.views import index, about, welcome
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', index),
+    path('about/', about),
+    path('contact/', welcome),
+]
+
+---
