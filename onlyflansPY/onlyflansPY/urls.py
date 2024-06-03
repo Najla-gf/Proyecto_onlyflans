@@ -20,9 +20,9 @@ from web.views import index, about, welcome
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
-    path('about/', about),
-    path('welcome/', welcome),
+    path('', index, name='index'),
+    path('about/', about, name='about'),
+    path('welcome/', welcome, name='welcome'),
 ]
 
 
