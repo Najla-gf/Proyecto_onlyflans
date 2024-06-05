@@ -1,0 +1,33 @@
+/* styles.css */
+body {
+    font-family: "Raleway", sans-serif;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+    width: auto;
+}
+
+.navbar-nav .nav-link {
+    margin-left: 10px;
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+.carousel-item {
+    height: 500px; /* Altura fija para el contenedor del carousel */
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Las imágenes se ajustarán al contenedor */
+}
+
+.rounded-circle {
+    border-radius: 100% !important;
+}
