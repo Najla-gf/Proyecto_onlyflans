@@ -1,11 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
-    <h1>Contacto</h1>
+<div class="container mt-5">
+    <h2>Formulario de Contacto</h2>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
+        <div class="mb-3">
+            {{ form.customer_email.label_tag }}
+            {{ form.customer_email }}
+        </div>
+        <div class="mb-3">
+            {{ form.customer_name.label_tag }}
+            {{ form.customer_name }}
+        </div>
+        <div class="mb-3">
+            {{ form.message.label_tag }}
+            {{ form.message }}
+        </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
 </div>
-{% endblock %}
+
+    {% endblock %}
