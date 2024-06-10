@@ -1,29 +1,47 @@
 {% load static %}
 <div class="container">
-<nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'index' %}">
-            <img src="{% static 'img/logo-onlyflans.png' %}" alt="OnlyFlans Logo" width="100" class="d-inline-block align-middle">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index' %}">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about' %}">Acerca</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'welcome' %}">Bienvenido</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact' %}">Contáctanos</a>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand" href="{% url 'index' %}">
+        <img
+          src="{% static 'img/logo-onlyflans.png' %}"
+          alt="OnlyFlans Logo"
+          width="100"
+          class="d-inline-block align-middle"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">Acerca</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">Contáctanos</a>
+          </li>
+          <li class="nav-item">
+          {% if user.is_authenticated %}
+          <a href="{% url 'logout' %}">Cerrar sesión</a>
+          {% else %}
+          <a href="{% url 'login' %}">Iniciar sesión</a>
+          {% endif %}
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
 </div>

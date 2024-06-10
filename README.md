@@ -84,7 +84,8 @@ _____________________________
 
 cd Proyecto_onlyflans
 
-source onlyflans/Scripts/activate (activamos)
+source onlyflans/Scripts/activate
+ (activamos)
 
 cd onlyflansPY (entrar en la carpeta)
 
