@@ -1,7 +1,7 @@
-/* styles.css */
 body {
     font-family: "Raleway", sans-serif;
-    background-color: black;
+    color: #543310;
+    background-color: #F8F4E1;
 }
 
 .navbar-brand img {
@@ -13,37 +13,48 @@ body {
     margin-left: 10px;
 }
 
-@media (max-width: 992px) {
-    .navbar-nav {
-        text-align: center;
-    }
-}
-
 .carousel-item {
-    height: 500px; /* Altura fija para el contenedor del carousel */
+    height: 500px;
 }
 
 .carousel-item img {
     height: 100%;
     width: 100%;
-    object-fit: cover; /* Las imágenes se ajustarán al contenedor */
-}
-
-.carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para que el texto resalte */
-    padding: 20px; /* Espacio alrededor del texto */
-    border-radius: 10px; /* Bordes redondeados */
+    object-fit: cover;
 }
 
 .carousel-caption h5 {
-    font-size: 2.5rem; /* Tamaño del título */
-    font-weight: bold; /* Texto en negrita */
-    color: #ffffff; /* Color del texto */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar legibilidad */
+    font-size: 2.5rem; 
+    font-weight: bold;
+    color: #F8F4E1; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* sombra */
 }
 
 .carousel-caption p {
-    font-size: 1.25rem; /* Tamaño del subtítulo */
-    color: #ffffff; /* Color del texto */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Sombra para mejorar legibilidad */
+    font-size: 1.25rem;
+    color: #F8F4E1; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* sombra */
+}
+
+.mt-5 {
+    color: #74512D;
+}
+
+.footer-custom {
+    background-color: #543310;
+    color: #F8F4E1;
+}
+
+.btn-social {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F8F4E1;
+    border-color: #F8F4E1;
+}
+.btn-social i {
+    font-size: 20px;
 }
