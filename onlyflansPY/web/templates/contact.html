@@ -1,23 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container mt-5">
-    <h2>Formulario de Contacto</h2>
-    <form method="post">
-        {% csrf_token %}
-        <div class="mb-3">
-            {{ form.customer_email.label_tag }}
-            {{ form.customer_email }}
+<div class="container mt-5 mb-2">
+    <h2 class="text-center">Formulario de Contacto</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    {{ form.customer_email.label_tag }}
+                    {{ form.customer_email }}
+                </div>
+                <div class="mb-3">
+                    {{ form.customer_name.label_tag }}
+                    {{ form.customer_name }}
+                </div>
+                <div class="mb-3">
+                    {{ form.message.label_tag }}
+                    {{ form.message }}
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button type="button" class="btn btn-outline-secondary">Enviar</button>
+                </div>
+            </form>
         </div>
-        <div class="mb-3">
-            {{ form.customer_name.label_tag }}
-            {{ form.customer_name }}
-        </div>
-        <div class="mb-3">
-            {{ form.message.label_tag }}
-            {{ form.message }}
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
+    </div>
 </div>
-
-    {% endblock %}
+{% endblock %}

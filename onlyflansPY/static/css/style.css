@@ -1,6 +1,7 @@
 /* styles.css */
 body {
     font-family: "Raleway", sans-serif;
+    background-color: black;
 }
 
 .navbar-brand img {
@@ -28,6 +29,21 @@ body {
     object-fit: cover; /* Las imágenes se ajustarán al contenedor */
 }
 
-.rounded-circle {
-    border-radius: 100% !important;
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para que el texto resalte */
+    padding: 20px; /* Espacio alrededor del texto */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.carousel-caption h5 {
+    font-size: 2.5rem; /* Tamaño del título */
+    font-weight: bold; /* Texto en negrita */
+    color: #ffffff; /* Color del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar legibilidad */
+}
+
+.carousel-caption p {
+    font-size: 1.25rem; /* Tamaño del subtítulo */
+    color: #ffffff; /* Color del texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Sombra para mejorar legibilidad */
 }
