@@ -2,6 +2,7 @@ body {
     font-family: "Raleway", sans-serif;
     color: #543310;
     background-color: #F8F4E1;
+    padding-top: 50px; /* Ajustar el padding para que no se superponga el contenido */
 }
 
 .navbar-brand img {
