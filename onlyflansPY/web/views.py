@@ -1,11 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Flan
-from .forms import ContactFormModelForm
+from .forms import ContactFormModelForm, SignUpForm
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
-
 
 
 # Create your views here.
@@ -51,7 +50,26 @@ def login_view(request):
             return HttpResponseRedirect('/welcome')
         else:
             # Si la autenticación falla, mostrar un mensaje de error
-            error_message = 'Credenciales incorrectas. Por favor, intenta de nuevo.'
+            error_message = 'Los caracteres son incorrectos'
+            # Depuración: Imprime si la autenticación falla
+            print("Autenticación fallida")
             return render(request, 'login.html', {'error_message': error_message})
-    # Renderizar la plantilla 'login.html' sin mensaje de error
-    return render(request, 'login.html')
+    else:
+        # Renderizar la plantilla 'login.html' sin mensaje de error
+        return render(request, 'login.html')
+
+
+
+def signup(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            messages.success(request, 'Registro completado con éxito.')
+            return HttpResponseRedirect('/welcome')  # Aquí usamos HttpResponseRedirect
+        else:
+            messages.error(request, 'Por favor, corrige los errores en el formulario.')
+    else:
+        form = SignUpForm()
+    return render (request,'signup.html',{'form': form})
