@@ -41,6 +41,17 @@ body {
     color: #74512D;
 }
 
+.btn-outline-secondary {
+    color: #74512D; /* Color del texto */
+    border-color: #74512D; /* Color del borde */
+}
+
+.btn-outline-secondary:hover {
+    background-color: #74512D; /* Color de fondo al pasar el mouse */
+    color: white; /* Color del texto al pasar el mouse */
+    border-color: #74512D; /* Color del borde al pasar el mouse */
+}
+
 .footer-custom {
     background-color: #543310;
     color: #F8F4E1;

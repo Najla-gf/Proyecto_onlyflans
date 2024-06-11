@@ -38,21 +38,20 @@ def success(request):
     return render(request, 'success.html')
 
 
-# Vista de inicio de sesión
 def login_view(request):
     if request.method == 'POST':
         # Obtener el nombre de usuario y la contraseña del formulario
-        username = request.POST['username']
-        password = request.POST['password']
+        username = request.POST.get('username')
+        password = request.POST.get('password')
         # Autenticar al usuario
-        user = authenticate(username=username, password=password)
+        user = authenticate(request, username=username, password=password)
         if user is not None:
             # Si la autenticación es exitosa, iniciar sesión y redirigir al dashboard
             login(request, user)
             return HttpResponseRedirect('/welcome')
         else:
             # Si la autenticación falla, mostrar un mensaje de error
-            messages.error(request, 'Credenciales incorrectas. Por favor, intenta de nuevo.')
-            return HttpResponseRedirect('/login')  # Redirigir de vuelta a la página de inicio de sesión
-    # Renderizar la plantilla 'login.html'
+            error_message = 'Credenciales incorrectas. Por favor, intenta de nuevo.'
+            return render(request, 'login.html', {'error_message': error_message})
+    # Renderizar la plantilla 'login.html' sin mensaje de error
     return render(request, 'login.html')

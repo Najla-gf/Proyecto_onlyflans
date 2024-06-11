@@ -1,18 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container mt-5 mb-2">
+<div class="container mt-5 mb-5">
     <h2 class="text-center">Iniciar Sesión</h2>
     <div class="row justify-content-center">
         <div class="col-md-6">
+            {% if error_message %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error_message }}
+                </div>
+            {% endif %}
             <form method="post">
                 {% csrf_token %}
                 <div class="mb-3">
-                    {{ form.username.label_tag }}
-                    {{ form.username }}
+                    <label for="id_username" class="form-label">Nombre de usuario</label>
+                    <input type="text" name="username" id="id_username" class="form-control">
                 </div>
                 <div class="mb-3">
-                    {{ form.password.label_tag }}
-                    {{ form.password }}
+                    <label for="id_password" class="form-label">Contraseña</label>
+                    <input type="password" name="password" id="id_password" class="form-control">
                 </div>
                 <div class="d-grid gap-2 col-6 mx-auto">
                     <button type="submit" class="btn btn-outline-secondary">Iniciar Sesión</button>
